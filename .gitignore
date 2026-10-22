@@ -76,9 +76,3 @@ $RECYCLE.BIN/
 *.bak
 *.old
 
-# ----------------------------------------------------------------------------
-# Working document, not part of the published repo.
-# Contains the repo-settings text and the private "Before publishing" notes.
-# Delete this line if you want to publish the file.
-# ----------------------------------------------------------------------------
-GITHUB_DESCRIPTION.md
