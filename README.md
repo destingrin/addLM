@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-10b981?style=flat-square"></a>
-  <a href="#quick-start"><img alt="Windows" src="https://img.shields.io/badge/platform-Windows-007acc?style=flat-square&logo=windows&logoColor=white"></a>
+  <a href="#-quick-start"><img alt="Windows" src="https://img.shields.io/badge/platform-Windows-007acc?style=flat-square&logo=windows&logoColor=white"></a>
   <a href="https://github.com/ggml-org/llama.cpp"><img alt="llama.cpp 0.7.0-dev" src="https://img.shields.io/badge/llama.cpp-0.7.0--dev-orange?style=flat-square&logo=github"></a>
   <a href="https://github.com/anomalyco/opencode"><img alt="OpenCode v2.1.0" src="https://img.shields.io/badge/OpenCode-v2.1.0-111111?style=flat-square&logo=github"></a>
   <a href="https://www.python.org/"><img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white"></a>
@@ -37,22 +37,18 @@ providers, agents, MCP servers and permissions are preserved.
 
 ---
 
-<a name="contents"></a>
-
 ## 📖 Contents
 
-- [Features](#features)
-- [Quick start](#quick-start)
-- [Useful commands](#useful-commands)
-- [What is in the repository](#what-is-in-the-repository)
-- [Safety](#safety)
-- [Project status](#project-status)
-- [License](#license)
-- [References](#references)
+- [Features](#-features)
+- [Quick start](#-quick-start)
+- [Useful commands](#-useful-commands)
+- [What is in the repository](#-what-is-in-the-repository)
+- [Safety](#-safety)
+- [Project status](#-project-status)
+- [License](#-license)
+- [References](#-references)
 
 ---
-
-<a name="features"></a>
 
 ## ✨ Features
 
@@ -94,8 +90,6 @@ providers, agents, MCP servers and permissions are preserved.
 
 ---
 
-<a name="quick-start"></a>
-
 ## 🚀 Quick start
 
 ```text
@@ -117,9 +111,7 @@ providers, agents, MCP servers and permissions are preserved.
 
 ---
 
-<a name="useful-commands"></a>
-
-## 🛠️ Useful commands
+## 🔧 Useful commands
 
 ```powershell
 # Regenerate the OpenCode config without launching
@@ -133,8 +125,6 @@ python scripts\context-calc.py models
 ```
 
 ---
-
-<a name="what-is-in-the-repository"></a>
 
 ## 📦 What is in the repository
 
@@ -156,9 +146,7 @@ python scripts\context-calc.py models
 
 ---
 
-<a name="safety"></a>
-
-## 🛡️ Safety
+## 🔒 Safety
 
 The launcher enables llama-server's `--agent` tools (`exec_shell_command`,
 `write_file`). Never expose port 8081 to a network, and be aware that
@@ -166,8 +154,6 @@ abliterated models will answer harmful prompts - the launcher ships a refusal
 benchmark precisely so you can measure that yourself.
 
 ---
-
-<a name="project-status"></a>
 
 ## 📌 Project status
 
@@ -187,8 +173,6 @@ v2.1.0 on Windows.
 
 ---
 
-<a name="license"></a>
-
 ## 📄 License
 
 **MIT** - the most permissive license in common use. See [`LICENSE`](LICENSE).
@@ -200,8 +184,6 @@ downloaded from the official upstream releases, which are MIT-licensed by
 [mlabonne/harmful_behaviors](https://huggingface.co/datasets/mlabonne/harmful_behaviors).
 
 ---
-
-<a name="references"></a>
 
 ## 🔗 References
 
