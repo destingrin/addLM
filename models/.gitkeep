@@ -1,0 +1,8 @@
+# Place your .gguf files here.
+#
+#   models\MyModel.gguf                       (flat)
+#   models\MyModel-GGUF\MyModel.gguf          (per-model sub-folder)
+#
+# Both layouts are detected. mmproj-*.gguf projector files are ignored by
+# the model menu. The folder is kept in git with this empty .gitkeep file;
+# the weights themselves are never committed.

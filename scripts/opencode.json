@@ -1,0 +1,61 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "websearch": "allow",
+    "webfetch": "allow",
+    "doom_loop": "deny"
+  },
+  "mcp": {
+    "you-com": {
+      "type": "remote",
+      "url": "https://api.you.com/mcp?profile=free"
+    }
+  },
+  "compaction": {
+    "auto": true
+  },
+  "agents": {
+    "build": {
+      "steps": 15,
+      "system": "When you need a tool, emit a normal tool call for it directly. Do not attempt to call tools from inside the `execute` tool with Python `from ... import ...` syntax - that form is not supported and fails with a syntax error. Never repeat a tool call that has already failed; if a tool errors, change your approach and try a different one."
+    },
+    "plan": {
+      "steps": 15,
+      "system": "When you need a tool, emit a normal tool call for it directly. Do not attempt to call tools from inside the `execute` tool with Python `from ... import ...` syntax - that form is not supported and fails with a syntax error. Never repeat a tool call that has already failed; if a tool errors, change your approach and try a different one."
+    },
+    "compaction": {
+      "steps": 4
+    }
+  },
+  "providers": {
+    "llama-server": {
+      "name": "llama-server",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8081/v1"
+      },
+      "models": {
+        "active-model": {
+          "modelID": "local-model",
+          "name": "Active Local Model",
+          "capabilities": {
+            "tools": true,
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ],
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "limit": {
+            "context": 65536,
+            "output": 2048
+          }
+        }
+      }
+    }
+  }
+}

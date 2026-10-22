@@ -1,0 +1,84 @@
+# ============================================================================
+#  addLM - .gitignore
+#
+#  Both /llama.cpp/ and /models/ ship EMPTY when the project is uploaded.
+#  These rules are a SAFETY NET, not a fix for an oversized upload:
+#
+#    - the launcher downloads ~1.2 GB of llama.cpp binaries into llama.cpp\
+#      on the first run, so the folder is full locally even though it is
+#      empty in the repo
+#    - your .gguf weights land in models\
+#
+#  Without these rules, a "git add ." after the first launch tries to commit
+#  a 551 MB ggml-cuda.dll and the push is REJECTED by GitHub's 100 MB
+#  per-file limit. With them, the binaries and weights can never be staged.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# llama.cpp binaries (610 MB extracted, incl. a 551 MB ggml-cuda.dll)
+# Downloaded automatically by addLM.ps1 on the first run.
+# ----------------------------------------------------------------------------
+/llama.cpp/
+
+# ----------------------------------------------------------------------------
+# Models - GGUF weights are gigabytes and blow the 100 MB file limit.
+# The folder itself is kept via models/.gitkeep so a fresh clone has it.
+# ----------------------------------------------------------------------------
+/models/*
+!/models/.gitkeep
+
+# ----------------------------------------------------------------------------
+# Runtime state written by the launcher (regenerated on every run)
+#   llama-server.log             llama.cpp --log-file output
+#   opencode.runtime.json        live context/output budget of the server
+#   opencode.runtime.actual.json outcome of the last context-sync
+#   .models_last_hash.txt        change-detection cache for the model menu
+# ----------------------------------------------------------------------------
+scripts/llama-server.log
+scripts/opencode.runtime.json
+scripts/opencode.runtime.actual.json
+scripts/.models_last_hash.txt
+
+# ----------------------------------------------------------------------------
+# Python
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# ----------------------------------------------------------------------------
+# Editors / IDEs / OS
+# ----------------------------------------------------------------------------
+.vscode/
+.idea/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+Thumbs.db
+desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+*.lnk
+
+# ----------------------------------------------------------------------------
+# Misc
+# ----------------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.old
+
+# ----------------------------------------------------------------------------
+# Working document, not part of the published repo.
+# Contains the repo-settings text and the private "Before publishing" notes.
+# Delete this line if you want to publish the file.
+# ----------------------------------------------------------------------------
+GITHUB_DESCRIPTION.md
